@@ -4,7 +4,7 @@ import be.intecbrussel.model.user.Admin;
 import be.intecbrussel.model.user.User;
 
 public abstract class Book {
-private int bookIDNO;
+private Integer bookIDNO;
 private String bookTitle;
 private String bookAuthor;
 private int bookPublishYear;
@@ -13,7 +13,7 @@ private User whereIsTheBook;
 
 public Book()
 {}
-public Book(int bookIdNo , String bookTitle, String bookAuthor , int bookPublishYear, Boolean bookInLibrary)
+public Book(Integer bookIdNo , String bookTitle, String bookAuthor , int bookPublishYear, Boolean bookInLibrary)
 {
     this. bookIDNO = bookIdNo;
     this.bookTitle = bookTitle;
@@ -23,7 +23,7 @@ public Book(int bookIdNo , String bookTitle, String bookAuthor , int bookPublish
     this.whereIsTheBook=new Admin();
 }
 
-    public int getBookIDNO() {
+    public Integer getBookIDNO() {
         return bookIDNO;
     }
 
