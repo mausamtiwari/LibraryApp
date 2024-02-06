@@ -1,0 +1,16 @@
+@startuml
+start
+   : Admin Provides update Book Method;
+
+   : Admin provides BookIdNo;
+
+if (bookId present) then (yes)
+    :set new info Title/Author/PublishYear;
+    end;
+
+else (No)
+
+    : error Message book not found;
+    end;
+
+@enduml

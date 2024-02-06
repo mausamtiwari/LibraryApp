@@ -1,0 +1,21 @@
+@startuml
+start
+
+   :Admin provides sorting method by author or publish year;
+
+   if(Sorting by author name) then (yes)
+
+     : System sorts the books according to author ;
+     end;
+
+    elseif( sorting by publish year) then (yes)
+     : System sorts the books according to published year ;
+     end;
+
+    else (no )
+
+     : error msg. enter correct choice;
+      end;
+   endif
+
+@enduml

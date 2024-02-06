@@ -1,0 +1,36 @@
+@startuml
+
+start
+
+:Admin/Member use find method;
+if(find book with author name) then (yes)
+     if(book present with author name) then (yes)
+        : return list of books ;
+        end;
+        else(no)
+        :return error msg. book not found with this author;
+        stop;
+     endif
+elseif(find book with title) then (yes)
+        if(book present with this title) then (yes)
+          : return list of books ;
+          end;
+        else(no)
+          :return error msg. book not found with this title;
+          stop;
+          endif
+elseif(find book with BookIdNo)  then (yes)
+         if(book present with this title) then (yes)
+            : return book ;
+             end;
+         else(no)
+             :return error msg. book not found with this Id;
+             stop;
+             endif
+else(no)
+        : return error message . enter correct choice;
+        : end;
+endif
+
+@enduml
+
