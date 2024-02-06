@@ -1,0 +1,18 @@
+@startuml
+
+start
+:User asks for a borrow;
+:Librarian verifies user's identity;
+:Librarian checks book availability;
+if (Book available) then (yes)
+  :Librarian checks out the book;
+  :System updates book status to "checked out";
+  :System records borrow transaction;
+  :User receives book and due date;
+else (no)
+  :User gets notified that the book is not available;
+endif
+:Librarian provides confirmation to the user;
+stop
+
+@enduml

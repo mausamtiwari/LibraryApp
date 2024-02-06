@@ -1,0 +1,16 @@
+@startuml
+
+start
+:User initiates a return;
+:Librarian verifies user's identity;
+:Librarian verifies the books condition and the return date;
+if((book damaged) or (delayed return))
+:Calculate fines;
+endif
+:Librarian checks in the returned book(s);
+:System updates book status to "available";
+:System records return transaction;
+:User receives confirmation message;
+stop
+
+@enduml

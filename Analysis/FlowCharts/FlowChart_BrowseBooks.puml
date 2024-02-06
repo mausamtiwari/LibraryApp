@@ -1,0 +1,12 @@
+@startuml
+
+start
+:User/Librarian initiates "browseBooks";
+:System displays the list of categories;
+:User selects the desired category;
+:System retrieves the list of books in the entered category ;
+:User views the list of books;
+stop
+
+@enduml
+

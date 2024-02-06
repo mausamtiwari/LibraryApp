@@ -1,0 +1,15 @@
+@startuml
+
+start
+:Librarian initiates book removal;
+:Librarian provides ISBN to remove;
+:System searches for book in repository;
+if (Book found) then (yes)
+  :System removes the book from repository;
+  :Message "Book removed successfully";
+else (no)
+  :Message "Book not found in repository";
+endif
+stop
+
+@enduml
