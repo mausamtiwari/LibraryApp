@@ -1,0 +1,20 @@
+@startuml
+
+start
+:User requests to extend borrow period;
+:User provides ISBN;
+:System searches for the book in borrow records;
+if (Book found) then (yes)
+  if (Book not overdue) then (yes)
+    :System extends the due date for the book;
+    :Print "Borrow period extended successfully";
+  else (no)
+    :Print "Cannot extend period, book is overdue";
+  endif
+else (no)
+  :Print "Book not found in borrow records";
+endif
+stop
+
+@enduml
+
